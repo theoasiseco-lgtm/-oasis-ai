@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071b14"><meta name="description" content="OASIS AI - منصة إدارة الأعمال ومتابعة الأسواق">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css"><title>OASIS AI</title>
+</head>
+<body>
+<header><div class="brand"><div class="logo">O</div><div><b>OASIS AI</b><small>منصتك الذكية</small></div></div><button class="bell" id="notify" aria-label="التنبيهات">♧</button></header>
+<main>
+<section class="welcome"><div><small class="eyebrow">لوحة التحكم</small><h1>أهلاً بك 👋</h1><p>تابع أعمالك وأسواقك من مكان واحد</p></div><span class="status">نسخة الهاتف</span></section>
+<nav class="tabs"><button class="active" data-page="home">الرئيسية</button><button data-page="markets">الأسواق</button><button data-page="business">الأعمال</button><button data-page="ai">المساعد</button></nav>
+<section id="home" class="page">
+<div class="heading"><div><small class="eyebrow">ملخص الأعمال</small><h2>الوضع المالي</h2></div><span class="pill">CAD</span></div>
+<div class="balance"><small>صافي الرصيد المسجل</small><strong id="balance">$0.00</strong><small>حسب الحركات التي تسجلها على هذا الهاتف</small></div>
+<div class="stats"><div><small>الإيرادات</small><b class="green" id="income">$0.00</b></div><div><small>المصاريف</small><b class="red" id="expense">$0.00</b></div></div>
+<div class="heading spaced"><div><small class="eyebrow">إدارة النشاط</small><h2>The Osius Eco</h2></div><span class="pill">غسيل سيارات</span></div>
+<div class="business"><span class="car">✦</span><div><b>متابعة نشاطك التجاري</b><small>سجّل المبيعات والمصاريف لمتابعة الأداء.</small></div></div>
+<div class="heading spaced"><h2>إضافة حركة مالية</h2></div>
+<form id="entry"><div class="formrow"><select id="kind"><option value="income">إيراد</option><option value="expense">مصروف</option></select><input id="amount" type="number" min="0.01" step="0.01" placeholder="المبلغ بالدولار الكندي" required></div><input id="note" maxlength="100" placeholder="وصف مختصر (مثلاً: غسيل سيارة)"><button class="primary">حفظ الحركة</button></form>
+<div class="heading spaced"><h2>آخر الحركات</h2><button class="clear" id="clear">مسح السجل</button></div><div id="transactions" class="transactions"><p class="empty">لا توجد حركات بعد.</p></div>
+</section>
+<section id="markets" class="page hidden"><div class="heading"><div><small class="eyebrow">مراقبة الاستثمار</small><h2>الأسواق المالية</h2></div><span class="pill warn" id="marketStatus">بانتظار إعداد المفتاح</span></div>
+<div class="market"><b>🇨🇦 السوق الكندي</b><strong>TSX / TSXV</strong><small>أدخل رمز السهم، مثل SHOP أو RY</small></div>
+<div class="market"><b>🇺🇸 السوق الأمريكي</b><strong>NASDAQ / NYSE</strong><small>أدخل رمز السهم، مثل AAPL أو MSFT</small></div>
+<div class="quoteForm"><label for="symbol">رمز السهم</label><div class="formrow"><input id="symbol" maxlength="20" autocapitalize="characters" placeholder="مثال: AAPL"><button class="primary" id="getQuote" type="button">عرض السعر</button></div><div id="quoteResult" class="quoteResult" aria-live="polite">ستظهر النتيجة هنا بعد إعداد الاتصال الآمن.</div></div>
+<div class="notice"><b>ملاحظة عن البيانات</b><p>التغطية تعتمد على اشتراك Twelve Data؛ قد تكون الأسعار متأخرة أو بعض الرموز الكندية غير متاحة. هذه الأداة للمعلومات فقط وليست توصية استثمارية أو أمراً بالتداول.</p></div></section>
+<section id="business" class="page hidden"><div class="heading"><div><small class="eyebrow">إدارة النشاط</small><h2>The Osius Eco</h2></div></div><div class="business large"><span class="car">🚘</span><div><b>مركز غسيل السيارات والعناية بها</b><small>سجّل الإيرادات والمصاريف من الصفحة الرئيسية.</small></div></div><div class="details"><small>العنوان</small><b>2292 Dundas St W, Unit B, Mississauga, ON</b><small>الهاتف</small><b dir="ltr">437-445-0653</b><small>البريد</small><b dir="ltr">Theoasiseco@gmail.com</b></div><p class="subtle">تُحفظ البيانات على هذا الهاتف فقط في هذه النسخة، ولا يوجد مزامنة سحابية حالياً.</p></section>
+<section id="ai" class="page hidden"><div class="heading"><div><small class="eyebrow">OASIS AI</small><h2>المساعد الذكي</h2></div><span class="pill warn">قيد التجهيز</span></div><div class="assistant"><div class="orb">✧</div><h2>مساعدك في مكان واحد</h2><p>سيتم تفعيل ملخصات السوق وتحليلات الأسهم وتقارير الأعمال بعد ربط خدمات الذكاء الاصطناعي ومصادر البيانات.</p></div><div class="notice"><b>حالة النظام</b><p>لا يوجد اتصال حالياً بخدمات الذكاء الاصطناعي أو بيانات البورصة أو البريد والتنبيهات.</p></div></section>
+</main>
+<footer><button class="selected" data-page="home"><span>⌂</span>الرئيسية</button><button data-page="markets"><span>⌁</span>الأسواق</button><button data-page="business"><span>▣</span>الأعمال</button><button data-page="ai"><span>✧</span>المساعد</button></footer>
+<div id="toast" class="toast"></div><script src="app.js"></script>
+</body></html>
